@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -56,13 +55,13 @@ public class SceneChanger : MonoBehaviour
             }
 
                 //SceneManager.GetSceneByName("WinScene").GetRootGameObjects()[0];
-            firstRootObject.GetComponent<SpriteRenderer>().sprite = firstRootObject.GetComponent<ResultSceneImages>().getWinSprite(PlayerData.currentLevel);
+            firstRootObject.GetComponent<SpriteRenderer>().sprite = firstRootObject.GetComponent<ResultSceneImages>().GetWinSprite(PlayerData.currentLevel);
         }
         else
         {
             ChangeScene("FailedScene");
             GameObject firstRootObject = SceneManager.GetSceneByName("FailedScene").GetRootGameObjects()[0];
-            firstRootObject.GetComponent<SpriteRenderer>().sprite = firstRootObject.GetComponent<ResultSceneImages>().getFailedSprite(PlayerData.currentLevel);
+            firstRootObject.GetComponent<SpriteRenderer>().sprite = firstRootObject.GetComponent<ResultSceneImages>().GetFailedSprite(PlayerData.currentLevel);
         }
     }
 
@@ -74,17 +73,5 @@ public class SceneChanger : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

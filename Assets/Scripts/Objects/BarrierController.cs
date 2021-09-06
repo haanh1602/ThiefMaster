@@ -17,7 +17,7 @@ public class BarrierController : MonoBehaviour
         }
     }
 
-    public Vector3 getClose(Vector3 colPos)
+    public Vector3 GetClose(Vector3 colPos)
     {
         float min = 100000f;
         Vector3 res = new Vector3();

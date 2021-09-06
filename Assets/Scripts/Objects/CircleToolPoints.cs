@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CircleToolPoints : MonoBehaviour
 {
-
     public List<GameObject> child;
 
     [SerializeField]
@@ -27,16 +26,4 @@ public class CircleToolPoints : MonoBehaviour
             child[i].transform.localPosition =  new Vector3(Mathf.Cos(radianUnit * i) * Radius, Mathf.Sin(radianUnit * i) * Radius, child[i].transform.position.z);
         }
     }
-/*
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
 }

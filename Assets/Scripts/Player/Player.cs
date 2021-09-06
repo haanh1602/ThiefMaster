@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
                     preDirect = direction;
                     startPos = touchedPos;
                     //myRigid.velocity = new Vector2(direction.x / Time.deltaTime, direction.y / Time.deltaTime);
-                    myRigid.velocity = new Vector2(limitedVelocity(direction.x) / Time.deltaTime, limitedVelocity(direction.y) / Time.deltaTime);
+                    myRigid.velocity = new Vector2(LimitedVelocity(direction.x) / Time.deltaTime, LimitedVelocity(direction.y) / Time.deltaTime);
 
                     //transform.position = Vector3.Lerp(transform.position, transform.position + direction, 1f);
                     //transform.position += direction;
@@ -122,15 +122,15 @@ public class Player : MonoBehaviour
                 playerData.passedLevel = Mathf.Max(playerData.passedLevel, level + 1);
                 SavingSystem.SavePlayer(playerData);
                 GetComponent<ResultSceneController>().Win();
-                Invoke("resultWinScene", 1f);
+                Invoke("ResultWinScene", 1f);
             }
         }
         if(Failed)
         {
             myRigid.velocity = Vector2.zero;
             gameObject.isStatic = true;
-            Invoke("failed", 1f);
-            Invoke("resultFailedScene", 2f);
+            Invoke("FailedScene", 1f);
+            Invoke("ResultFailedScene", 2f);
         }
     }
 
@@ -161,22 +161,22 @@ public class Player : MonoBehaviour
         }
     }
 
-    void failed() 
+    void FailedScene() 
     {
         GetComponent<ResultSceneController>().Failed();
     }
 
-    private void resultWinScene()
+    private void ResultWinScene()
     {
         new SceneChanger().ChangeScene("WinScene") ;
     }
 
-    private void resultFailedScene()
+    private void ResultFailedScene()
     {
         new SceneChanger().ChangeScene("FailedScene");
     }
 
-    private float limitedVelocity(float v)
+    private float LimitedVelocity(float v)
     {
         // Limit at 0.1
         if(v < 0f)

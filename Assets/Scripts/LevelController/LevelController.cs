@@ -41,7 +41,7 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    public void chooseLevel()
+    public void ChooseLevel()
     {
         int passedLevel = SavingSystem.LoadPlayer().passedLevel;
         //Debug.Log(level + "\n" + passedLevel + ", " + PlayerData.currentLevel);

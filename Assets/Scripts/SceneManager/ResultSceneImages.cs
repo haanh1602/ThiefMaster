@@ -12,20 +12,20 @@ public class ResultSceneImages : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    public Sprite getWinSprite(int level)
+    public Sprite GetWinSprite(int level)
     {
         return winImages[level - 1];
     }
 
-    public Sprite getFailedSprite(int level)
+    public Sprite GetFailedSprite(int level)
     {
         return failedImages[level - 1];
     }
 
-    public Sprite getSprite(int level, bool Win)
+    public Sprite GetSprite(int level, bool Win)
     {
-        if (Win) return getWinSprite(level);
-        else return getFailedSprite(level);
+        if (Win) return GetWinSprite(level);
+        else return GetFailedSprite(level);
     }
 
     public void Awake()
@@ -39,11 +39,11 @@ public class ResultSceneImages : MonoBehaviour
         {
             if (gameObject.name.Equals("WinSceneImages"))
             {
-                spriteRenderer.sprite = getWinSprite(PlayerData.currentLevel);
+                spriteRenderer.sprite = GetWinSprite(PlayerData.currentLevel);
                 Debug.Log("Win");
             } else if (gameObject.name.Equals("FailedSceneImages"))
             {
-                spriteRenderer.sprite = getFailedSprite(PlayerData.currentLevel);
+                spriteRenderer.sprite = GetFailedSprite(PlayerData.currentLevel);
                 Debug.Log("Failed");
             }
         }
