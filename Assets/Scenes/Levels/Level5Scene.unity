@@ -690,6 +690,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 179248605}
     m_Modifications:
+    - target: {fileID: 7102894327885210507, guid: ef550579243cafe4faf242b9d0f0c5f3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7102894328229827648, guid: ef550579243cafe4faf242b9d0f0c5f3, type: 3}
       propertyPath: m_Name
       value: Level5_Tools_Polygon
@@ -736,6 +740,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7102894328229827650, guid: ef550579243cafe4faf242b9d0f0c5f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102894328283254477, guid: ef550579243cafe4faf242b9d0f0c5f3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102894328487220751, guid: ef550579243cafe4faf242b9d0f0c5f3, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 5019444325538188453}
   - component: {fileID: 5019444325538188456}
   m_Layer: 7
-  m_Name: Tool_Rectangle
+  m_Name: Tools_Rectangle
   m_TagString: Barrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
